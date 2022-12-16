@@ -12,7 +12,7 @@
         <TextBox HorizontalAlignment="Center" Margin="0,148,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="157" Height="24"/>
         <Label Content="Tytuł" HorizontalAlignment="Left" Margin="323,74,0,0" VerticalAlignment="Top"/>
         <Label Content="Autor" HorizontalAlignment="Left" Margin="321,128,0,0" VerticalAlignment="Top"/>
-        <Button Content="Dodaj" HorizontalAlignment="Center" Margin="0,177,0,0" VerticalAlignment="Top" Height="24" Width="157"/>
+        <Button Content="Dodaj" HorizontalAlignment="Center" Margin="0,177,0,0" VerticalAlignment="Top" Height="24" Width="157" Click="Button_Click_1"/>
 
     </Grid>
 </Window>

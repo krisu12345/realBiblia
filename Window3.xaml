@@ -12,7 +12,7 @@
         <TextBox HorizontalAlignment="Left" Margin="312,199,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label Content="Tytuł" HorizontalAlignment="Left" Margin="312,122,0,0" VerticalAlignment="Top"/>
         <Label Content="Autor" HorizontalAlignment="Left" Margin="312,173,0,0" VerticalAlignment="Top"/>
-        <Button Content="Wyszukaj" HorizontalAlignment="Left" Margin="312,222,0,0" VerticalAlignment="Top" Height="26" Width="120"/>
+        <Button Content="Wyszukaj" HorizontalAlignment="Left" Margin="312,222,0,0" VerticalAlignment="Top" Height="26" Width="120" Click="Button_Click_1"/>
         <TextBox HorizontalAlignment="Left" Margin="477,145,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Height="82"/>
 
     </Grid>
