@@ -21,5 +21,13 @@ namespace Biblioteka
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();///chowa aktualne okno
+            MainWindow x = new MainWindow();/// tworzę funkcje x odwołującą się donastępnego okna
+            x.ShowDialog();/// pokazuje nowe okno
+            this.Close();/// zamykam poprzednie oknko, które zostało schowane
+        }
     }
 }
