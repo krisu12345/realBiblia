@@ -10,8 +10,8 @@
         <Button Content="Wróć" HorizontalAlignment="Left" Margin="77,328,0,0" VerticalAlignment="Top" Height="42" Width="99" Click="Button_Click"/>
         <TextBox HorizontalAlignment="Left" Margin="301,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox HorizontalAlignment="Left" Margin="301,170,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Tytuł" HorizontalAlignment="Left" Margin="301,98,0,0" VerticalAlignment="Top"/>
-        <Label Content="Autor" HorizontalAlignment="Left" Margin="301,142,0,0" VerticalAlignment="Top"/>
+        <Label Content="Tytuł" HorizontalAlignment="Left" Margin="301,98,0,0" VerticalAlignment="Top" Width="40"/>
+        <Label Content="Autor" HorizontalAlignment="Left" Margin="301,142,0,0" VerticalAlignment="Top" Height="26" Width="60"/>
         <Button Content="Usuń" HorizontalAlignment="Left" Margin="301,193,0,0" VerticalAlignment="Top" Height="24" Width="120"/>
 
     </Grid>
