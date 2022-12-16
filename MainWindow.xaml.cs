@@ -28,7 +28,7 @@ namespace Biblioteka
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             this.Hide();///chowa aktualne okno
-            Window1 x = new Window1();/// tworzę funkcje x odwołującą się do aktualnego okna
+            Window1 x = new Window1();/// tworzę funkcje x odwołującą się do następnego okna
             x.ShowDialog();/// pokazuje nowe okno
             this.Close();/// zamykam poprzednie oknko, które zostało schowane
         }
@@ -36,7 +36,7 @@ namespace Biblioteka
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             this.Hide();///chowa aktualne okno
-            Window2 x = new Window2();/// tworzę funkcje x odwołującą się do aktualnego okna
+            Window2 x = new Window2();/// tworzę funkcje x odwołującą się do następnego okna
             x.ShowDialog();/// pokazuje nowe okno
             this.Close();/// zamykam poprzednie oknko, które zostało schowane
         }
@@ -44,7 +44,7 @@ namespace Biblioteka
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             this.Hide();///chowa aktualne okno
-            Window3 x = new Window3();/// tworzę funkcje x odwołującą się do aktualnego okna
+            Window3 x = new Window3();/// tworzę funkcje x odwołującą się do następnego okna
             x.ShowDialog();/// pokazuje nowe okno
             this.Close();/// zamykam poprzednie oknko, które zostało schowane
         }
