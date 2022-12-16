@@ -32,5 +32,21 @@ namespace Biblioteka
             x.ShowDialog();/// pokazuje nowe okno
             this.Close();/// zamykam poprzednie oknko, które zostało schowane
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.Hide();///chowa aktualne okno
+            Window2 x = new Window2();/// tworzę funkcje x odwołującą się do aktualnego okna
+            x.ShowDialog();/// pokazuje nowe okno
+            this.Close();/// zamykam poprzednie oknko, które zostało schowane
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            this.Hide();///chowa aktualne okno
+            Window3 x = new Window3();/// tworzę funkcje x odwołującą się do aktualnego okna
+            x.ShowDialog();/// pokazuje nowe okno
+            this.Close();/// zamykam poprzednie oknko, które zostało schowane
+        }
     }
 }
