@@ -32,7 +32,7 @@ namespace Biblioteka
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            /*string myConnection = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\student\source\repos\LibraryProject\LibraryProject\Biblioteka.mdf; Integrated Security = True";
+            /*string myConnection = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\student\Source\Repos\LibraryProject\LibraryProject\Biblioteka.mdf; Integrated Security = True";
             SqlConnection myConn = new SqlConnection(myConnection);
             SqlDataAdapter myDataAdapter = new SqlDataAdapter();
             SqlCommandBuilder cb = new SqlCommandBuilder(myDataAdapter);
@@ -41,9 +41,14 @@ namespace Biblioteka
 
             SqlCommand cmd = new SqlCommand(myConnection);
             cmd.Connection = myConn;
-            cmd.CommandText = "INSERT INTO [books](Tytul, Autor, Gatunek) values ('" + tytul.Text + "','" + autor.Text + "','" + gatunek.Text + "')";
-            cmd.ExecuteNonQuery();
-
+            try
+            {
+                cmd.CommandText = "DELETE FROM [books] WHERE Tytul = '" + tytul.Text + "' AND AUTOR = '" + autor.Text + "' AND GATUNEK = '" + gatunek.Text + "'";
+                cmd.ExecuteNonQuery();
+            }catch(Exception er)
+            {
+                MessageBox.Show("Ksiazka jest wypozyczona");
+            }
             myConn.Close();*/
         }
     }
