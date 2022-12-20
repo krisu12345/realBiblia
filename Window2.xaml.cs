@@ -47,7 +47,7 @@ namespace Biblioteka
             cmd.Connection = myConn;
             try
             {
-                cmd.CommandText = "DELETE FROM [Table] WHERE Tytul = '" + tytul1.Text + "' AND Autor = '" + autor1.Text;
+                cmd.CommandText = "DELETE FROM [Table] WHERE Tytul = '" + tytul1.Text + "' AND Autor = '" + autor1.Text + "'";
                 cmd.ExecuteNonQuery();
             }catch(Exception er)
             {

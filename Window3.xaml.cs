@@ -28,10 +28,10 @@ namespace Biblioteka
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            this.Hide();///chowa aktualne okno
+            this.Hide();                    ///chowa aktualne okno
             MainWindow x = new MainWindow();/// tworzę funkcje x odwołującą się donastępnego okna
-            x.ShowDialog();/// pokazuje nowe okno
-            this.Close();/// zamykam poprzednie oknko, które zostało schowane
+            x.ShowDialog();                 /// pokazuje nowe okno
+            this.Close();                   /// zamykam poprzednie oknko, które zostało schowane
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -51,12 +51,12 @@ namespace Biblioteka
              wypisz.Text = "";
 
             while (reader.Read())
-             {
-                 string line = $"{reader["Tytul"]} {reader["Autor"]}{reader["Id"]}";
+            {
+                string line = $"{reader["Tytul"]} {reader["Autor"]}{reader["Id"]}";
                 if (
-                    reader["Tytul"].ToString().Contains(tytul1.Text)&&
-                    reader["Autor"].ToString().Contains(autor1.Text)&&
-                    wypisz.AppendText(line + "\r\n"));
+                    reader["Tytul"].ToString().Contains(tytul1.Text) &&
+                    reader["Autor"].ToString().Contains(autor1.Text))
+                    wypisz.AppendText(line + "\r\n");
              }
             
 
