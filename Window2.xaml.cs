@@ -37,23 +37,23 @@ namespace Biblioteka
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             string myConnection = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\student\source\repos\realBiblia\Database1.mdf; Integrated Security = True";
-            SqlConnection myConn = new SqlConnection(myConnection);
+            SqlConnection myConn = new SqlConnection(myConnection); /// przypisywanie sciezki do bazy do zmiennej, tworzenie adaptera który pozwala nam sie laczyc
             SqlDataAdapter myDataAdapter = new SqlDataAdapter();
             SqlCommandBuilder cb = new SqlCommandBuilder(myDataAdapter);
-            myConn.Open();
+            myConn.Open();/// otwieranie polaczenia z baza danych
             DataSet ds = new DataSet();
 
-            SqlCommand cmd = new SqlCommand(myConnection);
+            SqlCommand cmd = new SqlCommand(myConnection);///laczenie z baza danych
             cmd.Connection = myConn;
-            try
+            try///probujemy wykonac dany kod lecz gdy pierwszy warunek się nie spelni wykona się catch
             {
-                cmd.CommandText = "DELETE FROM [Table] WHERE Tytul = '" + tytul1.Text + "' AND Autor = '" + autor1.Text + "'";
-                cmd.ExecuteNonQuery();
+                cmd.CommandText = "DELETE FROM [Table] WHERE Tytul = '" + tytul1.Text + "' AND Autor = '" + autor1.Text + "'";///zapyanie do bazy danych suuwajace ksiazke
+                cmd.ExecuteNonQuery();///egzekucja zapytania
             }catch(Exception er)
             {
-                MessageBox.Show("Nie ma");
+                MessageBox.Show("Nie ma");///jezeli nie wykona sie
             }
-            myConn.Close();
+            myConn.Close();///zamykanie polaczenia z baza
         }
     }
 }

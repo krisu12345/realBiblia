@@ -37,30 +37,28 @@ namespace Biblioteka
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             string myConnection = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\student\\source\\repos\\realBiblia\\Database1.mdf;Integrated Security=True";
-            SqlConnection myConn = new SqlConnection(myConnection);
-            SqlDataAdapter myDataAdapter = new SqlDataAdapter();
+            SqlConnection myConn = new SqlConnection(myConnection);/// przypisywanie sciezki do bazy do zmiennej, tworzenie adaptera który pozwala nam sie laczyc
+            SqlDataAdapter myDataAdapter = new SqlDataAdapter();///tworzenie adaptera aby moglo to funkcjonwoac z baza
             SqlCommandBuilder cb = new SqlCommandBuilder(myDataAdapter);
             myConn.Open();
             DataSet ds = new DataSet();
 
-            SqlCommand cmd = new SqlCommand("SELECT * FROM [Table]", myConn);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM [Table]", myConn);///zapytanie do bazy danych
             cmd.Connection = myConn;
 
-            var reader = cmd.ExecuteReader();
+            var reader = cmd.ExecuteReader();///czytanie z bazy danych
 
-             wypisz.Text = "";
+             wypisz.Text = "";///zmiena aby dodawac tutaj tezxt aby wypisac dane z bazy ktore chemy wyszukac
 
-            while (reader.Read())
+            while (reader.Read())///czytamy dane petla 
             {
                 string line = $"{reader["Tytul"]} {reader["Autor"]}{reader["Id"]}";
                 if (
-                    reader["Tytul"].ToString().Contains(tytul1.Text) &&
-                    reader["Autor"].ToString().Contains(autor1.Text))
-                    wypisz.AppendText(line + "\r\n");
+                    reader["Tytul"].ToString().Contains(tytul1.Text) &&///branie danych z tytulu i zamienienie na stringa 
+                    reader["Autor"].ToString().Contains(autor1.Text))///branie danych z autora i zamiana na stringa
+                    wypisz.AppendText(line + "\r\n");///dodanie do wyzej zmiennej texty aby wypisac dane
              }
-            
-
-        myConn.Close();
+        myConn.Close();///zamkniece polaczenia
         }
     }
 }

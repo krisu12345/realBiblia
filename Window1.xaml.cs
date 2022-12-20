@@ -38,18 +38,18 @@ namespace Biblioteka
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             string myConnection = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\student\source\repos\realBiblia\Database1.mdf; Integrated Security = True";
-            var myConn = new SqlConnection(myConnection);
+            var myConn = new SqlConnection(myConnection);/// przypisywanie sciezki do bazy do zmiennej, tworzenie adaptera który pozwala nam sie laczyc
             SqlDataAdapter myDataAdapter = new SqlDataAdapter();
             SqlCommandBuilder cb = new SqlCommandBuilder(myDataAdapter);
-            myConn.Open();
+            myConn.Open();/// otwieranie polaczenia z baza danych
             DataSet ds = new DataSet();
 
-            SqlCommand cmd = new SqlCommand(myConnection);
+            SqlCommand cmd = new SqlCommand(myConnection);///laczenie sie z baza danych
             cmd.Connection = myConn;
-            cmd.CommandText = "INSERT INTO [Table](Tytul, Autor) values ('" + tytul1.Text + "','" + autor1.Text + "')";
-            cmd.ExecuteNonQuery();
+            cmd.CommandText = "INSERT INTO [Table](Tytul, Autor) values ('" + tytul1.Text + "','" + autor1.Text + "')";///zapytanie do bazy
+            cmd.ExecuteNonQuery();///wykonywanei zapytania
 
-            myConn.Close();
+            myConn.Close();///zamykaneie polaczenia z baza
         }
     }
 }
