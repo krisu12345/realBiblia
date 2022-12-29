@@ -52,7 +52,7 @@ namespace Biblioteka
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
             this.Hide();///chowa aktualne okno
-            Window3 x = new Window3();/// tworzę funkcje x odwołującą się do następnego okna
+            Window4 x = new Window4();/// tworzę funkcje x odwołującą się do następnego okna
             x.ShowDialog();/// pokazuje nowe okno
             this.Close();/// zamykam poprzednie oknko, które zostało schowane
         }
