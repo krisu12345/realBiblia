@@ -12,7 +12,12 @@
         <Label Content="Autor" HorizontalAlignment="Left" Margin="306,146,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="autor1" HorizontalAlignment="Left" Margin="306,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button Content="Wypożycz" HorizontalAlignment="Left" Margin="306,217,0,0" VerticalAlignment="Top" Height="31" Width="120" Click="Button_Click"/>
-        <Button Content="Wróć" HorizontalAlignment="Left" Margin="119,306,0,0" VerticalAlignment="Top" Height="50" Width="77"/>
+        <Button Content="Wróć" HorizontalAlignment="Left" Margin="119,306,0,0" VerticalAlignment="Top" Height="50" Width="77" Click="Button_Click_1"/>
+        <TextBox x:Name="tytul2" HorizontalAlignment="Left" Margin="496,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Tytul" HorizontalAlignment="Left" Margin="496,87,0,0" VerticalAlignment="Top"/>
+        <Label Content="Autor" HorizontalAlignment="Left" Margin="496,146,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="autor2" HorizontalAlignment="Left" Margin="496,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Oddaj" HorizontalAlignment="Left" Margin="496,217,0,0" VerticalAlignment="Top" Height="31" Width="120" Click="Button_Click_2"/>
 
     </Grid>
 </Window>
