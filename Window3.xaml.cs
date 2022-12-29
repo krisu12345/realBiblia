@@ -54,14 +54,17 @@ namespace Biblioteka
             {
                 string line = $"{reader["Tytul"]} {reader["Autor"]}{reader["Id"]}{reader["Wypo"]}";
                 var wypo = reader["Wypo"].ToString();
+                var tyt = reader["Tytul"].ToString();
+                var aut = reader["Autor"].ToString();
                 if (
                     reader["Tytul"].ToString().Contains(tytul1.Text) &&///branie danych z tytulu i zamienienie na stringa 
                     reader["Autor"].ToString().Contains(autor1.Text))///branie danych z autora i zamiana na stringa
                     wypisz.AppendText(line + "\r\n");///dodanie do wyzej zmiennej texty aby wypisac dane
-                if (wypo == "True")
+                if (reader["Tytul"].ToString().Contains(tytul1.Text) && wypo == "True")
                     MessageBox.Show("Wypożyczone");
-                myConn.Close();///zamkniece polaczenia
+
             }
+            myConn.Close();///zamkniece polaczenia
         }
     }
 }
