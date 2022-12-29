@@ -37,7 +37,7 @@ namespace Biblioteka
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            string myConnection = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\48510\Source\Repos\krisu12345\realBiblia\Database1.mdf; Integrated Security = True";
+            string myConnection = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\48510\Source\Repos\realBiblia\Database1.mdf; Integrated Security = True";
             var myConn = new SqlConnection(myConnection);/// przypisywanie sciezki do bazy do zmiennej, tworzenie adaptera który pozwala nam sie laczyc
             SqlDataAdapter myDataAdapter = new SqlDataAdapter();
             SqlCommandBuilder cb = new SqlCommandBuilder(myDataAdapter);
