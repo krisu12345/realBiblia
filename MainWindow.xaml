@@ -14,6 +14,7 @@
         <Button Content="Dodaj książkę" Grid.Column="1" HorizontalAlignment="Left" Margin="311,83,0,0" VerticalAlignment="Top" Click="Button_Click" Height="36" Width="124"/>
         <Button Content="Usuń książkę" Grid.Column="1" HorizontalAlignment="Left" Margin="311,139,0,0" VerticalAlignment="Top" Height="34" Width="124" Click="Button_Click_1"/>
         <Button Content="Wyszukaj książkę" Grid.Column="1" HorizontalAlignment="Left" Margin="311,195,0,0" VerticalAlignment="Top" Height="34" Width="124" Click="Button_Click_2"/>
+        <Button Content="Wypożycz" Grid.Column="1" HorizontalAlignment="Left" Margin="311,252,0,0" VerticalAlignment="Top" Height="32" Width="124" Click="Button_Click_3"/>
 
     </Grid>
 </Window>
